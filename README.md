@@ -1,5 +1,10 @@
 # pi-openai-guidance
 
+## Based on OpenAI's official prompting guides
+
+- **[GPT-6 Astra: Prompting best practices](https://developers.openai.com/api/docs/guides/latest-model#prompting-best-practices)**
+- **[Codex Prompting Guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide)**
+
 Model-specific OpenAI prompting recommendations for a personal Pi setup. Astra gets Astra instructions; Sol and Luna get GPT-5.6-family instructions. Applicable Codex coding guidance is shared. Each rule has an independent opt-out.
 
 This is a prompt extension, not a replacement harness. It preserves Pi's prompt and tools, uses no runtime network requests, and changes no API parameters or reasoning settings. See the [coverage and deviations](docs/coverage.md) before enabling it.
