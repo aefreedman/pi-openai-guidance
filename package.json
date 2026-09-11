@@ -1,0 +1,28 @@
+{
+  "name": "pi-openai-guidance",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bundled model-specific OpenAI prompt recommendations for Pi",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.84.4",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0"
+  }
+}
