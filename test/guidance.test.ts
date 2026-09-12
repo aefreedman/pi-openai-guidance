@@ -88,8 +88,9 @@ test("preserves base prompt byte-for-byte, deterministic assembly, no accumulati
 
 test("real extension hook switches models, rereads opt-outs, and leaves other events alone", () => {
   const dir = mkdtempSync(join(tmpdir(), "guidance-hook-"));
-  const home = process.env.HOME;
-  process.env.HOME = dir;
+  const homeKey = process.platform === "win32" ? "USERPROFILE" : "HOME";
+  const home = process.env[homeKey];
+  process.env[homeKey] = dir;
   type Handler = (event: { systemPrompt: string }, ctx: { model?: ReturnType<typeof model> }) => { systemPrompt: string } | undefined;
   const handlers = new Map<string, Handler>();
   let active = tools;
@@ -118,7 +119,7 @@ test("real extension hook switches models, rereads opt-outs, and leaves other ev
     assert.throws(() => run({ systemPrompt: base }, { model: model() }), /Invalid/);
     assert.equal(run({ systemPrompt: base }, { model: model("other") }), undefined);
   } finally {
-    if (home === undefined) delete process.env.HOME; else process.env.HOME = home;
+    if (home === undefined) delete process.env[homeKey]; else process.env[homeKey] = home;
     rmSync(dir, { recursive: true });
   }
 });
