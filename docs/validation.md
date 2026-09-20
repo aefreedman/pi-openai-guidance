@@ -1,8 +1,14 @@
 # Validation
 
-Checked locally on 2026-09-11 against Pi 0.86.1 declarations.
+## Latest baseline: Pi 0.86.1
 
-## Commands and outcomes
+Revalidated on 2026-09-20 with `npm run check`: typecheck and all 11 tests passed against Pi 0.86.1. No live model or TUI checks were performed.
+
+## Original validation: Pi 0.84.4
+
+The following records the original 2026-09-11 validation, not the current dependency baseline.
+
+### Commands and outcomes
 
 - `git init`: created local repository; no remote, commit, push, or staging.
 - `npm install --ignore-scripts`: the machine's npm shim initially used aube. Replaced its generated lock with a portable npm `package-lock.json` using the installed real npm CLI. No absolute/local cache paths remain in that lockfile.
