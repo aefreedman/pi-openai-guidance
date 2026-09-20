@@ -1,6 +1,6 @@
 # Validation
 
-Checked locally on 2026-09-11 against Pi 0.84.4 declarations.
+Checked locally on 2026-09-11 against Pi 0.86.1 declarations.
 
 ## Commands and outcomes
 
@@ -42,4 +42,4 @@ Package/TypeScript JSON configuration contains only declarative settings and thr
 
 ## Not verified
 
-No live model requests, TUI smoke session, credentials access, billing changes, installation into the user's Pi settings, or behavioral model evals were performed. Source-based prompting improvements are not proof of model-quality gains. Later Pi extensions can still change the prompt. Provider phase replay and Pi compaction correctness are outside this extension's tests. Compatibility with Pi versions newer than 0.84.4 is not claimed.
+No live model requests, TUI smoke session, credentials access, billing changes, installation into the user's Pi settings, or behavioral model evals were performed. Source-based prompting improvements are not proof of model-quality gains. Later Pi extensions can still change the prompt. Provider phase replay and Pi compaction correctness are outside this extension's tests. Compatibility is validated against the latest stable Pi baseline, 0.86.1.

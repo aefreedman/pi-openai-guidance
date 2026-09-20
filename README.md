@@ -11,7 +11,7 @@ This is a prompt extension, not a replacement harness. It preserves Pi's prompt 
 
 ## Requirements
 
-- Pi 0.84.4 (the audited version; newer versions are not yet verified).
+- Pi 0.86.1 (the audited version).
 - Node.js 22.19 or newer.
 - Exact model IDs `gpt-6-astra`, `gpt-5.6-sol`, `gpt-5.6-luna`, or `gpt-5.6-terra` on `openai-codex` or `openai`. Other providers, aliases, and models are unchanged.
 
@@ -68,7 +68,7 @@ npm install --ignore-scripts
 npm run check
 ```
 
-Tests use Node's built-in runner and temporary homes/configs; they make no model requests. Typechecking uses the real Pi 0.84.4 declarations. See [validation](docs/validation.md) for checks and limitations.
+Tests use Node's built-in runner and temporary homes/configs; they make no model requests. Typechecking uses the real Pi 0.86.1 declarations. See [validation](docs/validation.md) for checks and limitations.
 
 The budget is at most 1,000 handwritten executable lines, including tests and scripts. Prompt text, Markdown, source snapshots, and documentation fixtures are excluded. Current TypeScript is approximately 300 lines. The test suite enforces the source/test line limit; count additional executable files too if adding them.
 
