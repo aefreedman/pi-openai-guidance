@@ -4,4 +4,4 @@
 
 ### Changed
 
-- Updated the Pi development dependency and validation baseline to 0.86.1.
+- Align development and deterministic validation with Pi 0.99.1.
